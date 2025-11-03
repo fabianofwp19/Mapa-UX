@@ -45,8 +45,6 @@ A aplicação web segue a jornada da equipe desde esses termos brutos, passando 
 * **JavaScript (ES6+):** Para toda a interatividade, incluindo:
     * Simulação de autenticação (login/logout).
     * Manipulação do DOM para exibir/ocultar seções.
-    * Gerenciamento do `localStorage` para salvar, carregar e resetar o conteúdo editável (`contenteditable`).
-
 ---
 
 ## 🚀 Como Executar
