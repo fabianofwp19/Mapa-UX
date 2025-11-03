@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Visual - Protagonismo Estudantil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="auth-container">
+        <div class="auth-card">
+            <div class="brand">
+                <div class="logo">UX</div>
+            </div>
+            <h2>Mapa do Processo</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">Email (simulado)</label>
+                    <input type="email" id="email" class="form-control" placeholder="digite@qualquer.email" value="aluno@ux.com">
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha (simulada)</label>
+                    <input type="password" id="password" class="form-control" placeholder="Qualquer senha" value="123456">
+                </div>
+                <div id="auth-error" class="auth-error"></div>
+                <button type="submit" class="btn-submit">Entrar</button>
+            </form>
+            <div class="auth-toggle">
+                Não tem uma conta? <a href="#">Registre-se</a>
+            </div>
+        </div>
+    </div>
+
+    <main id="main-app" class="container hidden">
+        <header>
+            <div class="brand">
+                <div class="logo">UX</div>
+                <div>
+                    <h1>Mapa Visual do Processo</h1>
+                    <div class="sub" id="aula_info" contenteditable="true">Aula 20/10 | Docente: Ecivaldo de Souza Matos</div>
+                </div>
+            </div>
+            <div class="actions">
+                <button id="reset-btn" class="btn">Resetar Texto</button>
+                <button id="logout-btn" class="btn">Sair</button>
+            </div>
+        </header>
+
+        <div class="grid">
+
+            <div class="col-12 card">
+                <h2>1. Termos Iniciais (Brainstorm)</h2>
+                <div class="actions" style="justify-content: flex-start;">
+                    <span class="badge" id="term1" contenteditable="true">Estudantes indígenas</span>
+                    <span class="badge" id="term2" contenteditable="true">Morador de periferia</span>
+                    <span class="badge" id="term3" contenteditable="true">Etapa do ensino superior</span>
+                    <span class="badge" id="term4" contenteditable="true">Refugiado</span>
+                    <span class="badge" id="term5" contenteditable="true">PCD</span>
+                    <span class="badge" id="term6" contenteditable="true">Gosto pelo estudo</span>
+                    <span class="badge" id="term7" contenteditable="true">Autoidentificação</span>
+                </div>
+            </div>
+
+            <div class="col-6 card">
+                <h2>2. Refinamento dos Termos</h2>
+                <ul>
+                    <li id="refine1_li" contenteditable="true">"Indígena" ➡️ <strong>Comunidades Tradicionais</strong></li>
+                    <li id="refine2_li" contenteditable="true">"Gosto pelo estudo" ➡️ <strong>Curiosidade pela catarse e pelo conhecimento</strong></li>
+                </ul>
+            </div>
+            <div class="col-6 card">
+                <h2>3. Tema Central Definido</h2>
+                <blockquote style="margin: 0; font-size: 20px; font-weight: 700; color: var(--accent);" id="theme1" contenteditable="true">
+                    Protagonismo Estudantil
+                </blockquote>
+            </div>
+
+            <div class="col-12">
+                <h2 style="margin-top: 14px; border:none; padding-left: 0;">4. Primeira Rodada de Palavras-Chave</h2>
+            </div>
+            <div class="col-4 card">
+                <h3>Jéssica</h3>
+                <p style="font-size: 20px; font-weight: 700;" id="key1_1" contenteditable="true">Localização</p>
+            </div>
+            <div class="col-4 card">
+                <h3>Fabiano</h3>
+                <p style="font-size: 20px; font-weight: 700;" id="key1_2" contenteditable="true">Desmotivação</p>
+            </div>
+            <div class="col-4 card">
+                <h3>Letícia</h3>
+                <p style="font-size: 20px; font-weight: 700;" id="key1_3" contenteditable="true">Falta de incentivo</p>
+            </div>
+
+            <div class="col-12 card">
+                <h2>5. Ponto de Reflexão (O "Pivot")</h2>
+                <p id="pivot_text" contenteditable="true">Jéssica troca sua palavra por "interpretação". Há a percepção de que talvez as palavras propostas não conseguissem guiar para uma pergunta que abrangesse o tema central. Novas palavras são geradas.</p>
+            </div>
+
+            <div class="col-12">
+                <h2 style="margin-top: 14px; border:none; padding-left: 0;">6. Segunda Rodada de Palavras-Chave (Revisada)</h2>
+            </div>
+            <div class="col-4 card">
+                <h3>Jéssica</h3>
+                <p style="font-size: 20px; font-weight: 700; color: var(--ok);" id="key2_1" contenteditable="true">Influência positiva</p>
+            </div>
+            <div class="col-4 card">
+                <h3>Fabiano</h3>
+                <p style="font-size: 20px; font-weight: 700; color: var(--warn);" id="key2_2" contenteditable="true">Desmotivação</p>
+            </div>
+            <div class="col-4 card">
+                <h3>Letícia</h3>
+                <p style="font-size: 20px; font-weight: 700; color: var(--ok);" id="key2_3" contenteditable="true">Reconhecimento</p>
+            </div>
+
+            <div class="col-12 card">
+                <h2>7. Opções de Pergunta Geradas</h2>
+                <ol style="padding-left: 20px; font-family: 'Inter', system-ui; line-height: 1.7;">
+                    <li id="q1" contenteditable="true">O protagonismo estudantil causa reconhecimento, influência positiva ou desmotivação?</li>
+                    <li id="q2" contenteditable="true"><strong>Como a falta de reconhecimento e de influência positiva de liderança pode gerar desmotivação e enfraquecer o protagonismo estudantil?</strong></li>
+                    <li id="q3" contenteditable="true">De que forma o reconhecimento das ações estudantis e a influência positiva entre os colegas podem ajudar a reduzir a desmotivação?</li>
+                </ol>
+            </div>
+
+            <div class="col-12 card">
+                <h2>8. Pergunta Final (Votação)</h2>
+                <blockquote style="background: var(--glass); border-left: 4px solid var(--accent2); padding: 16px; margin: 0; font-size: 18px; font-weight: 500;" id="final_q" contenteditable="true">
+                    "Como a falta de reconhecimento e de influência positiva de liderança pode gerar desmotivação e enfraquecer o protagonismo estudantil?"
+                </blockquote>
+            </div>
+
+        </div>
+
+        <footer>
+            <p id="footer_names" contenteditable="true">Discentes: Fabiano, Jéssica Amaro, Leticia Boncompanhe.</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
